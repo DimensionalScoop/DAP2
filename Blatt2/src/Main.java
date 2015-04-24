@@ -17,6 +17,7 @@ public class Main
 	static fillMethod fillFunction = fillMethod.rand;
 
 
+	//Creates and sorts an array and prints statistics
 	public static void main(String[] args)
 	{
 		parseArgs(args);
@@ -55,9 +56,10 @@ public class Main
 			return System.currentTimeMillis()-startM;
 		}
 		
-		return -1;
+		throw new UnsupportedOperationException();//we should never get to this point
 	}
 
+	//fills the given array with values. Method is determined by 'global' variable fillFunction
 	static void fillArray(int[] array)
 	{
 		switch (fillFunction)
@@ -81,18 +83,21 @@ public class Main
 		}
 	}
 
+	//tries to parse all arguments from the command line, killing the program on encountering wrong params
 	static void parseArgs(String[] args)
 	{
 		int index = 0;// the index of the argument that is being processed
 
 		try
 		{
+			//parse array size
 			arraySize = Integer.parseInt(args[index]);
 			index++;
 
 			if (args.length == index)// end parsing when we run out of arguments to parse
 				return;
 
+			//parse sorting method
 			switch (args[index])
 			{
 			case "insert":
@@ -112,6 +117,7 @@ public class Main
 			if (args.length == index)// end parsing when we run out of arguments to parse
 				return;
 
+			//parse how the empty array should be filled
 			switch (args[index])
 			{
 			case "auf":

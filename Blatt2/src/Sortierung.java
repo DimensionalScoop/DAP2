@@ -1,14 +1,14 @@
-import java.util.Arrays;
-
 public class Sortierung
 {
 
-	public static boolean isSorted(int[] array)// determines whether array is ascending
+	// determines whether array is ascending
+	public static boolean isSorted(int[] array)
 	{
 		return isSorted(array, 0, array.length);
 	}
 
-	public static boolean isSorted(int[] array, int start, int length)// determines whether array is ascending
+	// determines whether array is ascending
+	public static boolean isSorted(int[] array, int start, int length)
 	{
 		if (start >= length)
 			return true;
@@ -30,7 +30,7 @@ public class Sortierung
 				array[i + 1] = array[i];
 				i--;
 			}
-			array[i + 1] = key;// insert item to its right position so that the array from 0 to j is correctly sorted
+			array[i + 1] = key;// insert item to its correct position so that the array from 0 to j is correctly sorted
 			assert isSorted(array, 0, j);
 		}
 
@@ -42,20 +42,22 @@ public class Sortierung
 		mergeSort(array, 0, array.length-1);
 	}
 
-	public static void mergeSort(int[] array, int start, int length)
+	//sorts the sub array from start to end. Note that 'end' is the index of the last item, not the length of the array
+	public static void mergeSort(int[] array, int start, int end)
 	{
-		if (length-start>0)//array is already sorted if start==length
+		if (end-start>0)//array is already sorted if start==length
 		{
-			int mid = (int)Math.floor((start + length) / 2);//split array
+			int mid = (int)Math.floor((start + end) / 2);//split array
 
 			mergeSort(array, start, mid);
-			mergeSort(array, mid+1, length);
-			merge(array, start, mid, length);
-			assert isSorted(array, start, length);
+			mergeSort(array, mid+1, end);
+			merge(array, start, mid, end);
+			assert isSorted(array, start, end);
 		}
 	}
 	
-	static void merge(int[] array, int start, int mid, int end)//merges two sorted sets into one sorted set
+	//merges two sorted sets into one sorted set. Note that 'end' is the index of the last item, not the length of the array
+	static void merge(int[] array, int start, int mid, int end)
 	{
 		int[] result = new int[end - start+1];
 
