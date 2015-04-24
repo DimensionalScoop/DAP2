@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config transient="false" shared_ur="file:configuration/org.eclipse.update/platform.xml" date="1421939500756" version="3.0">
+	<site enabled="true" updateable="true" policy="USER-EXCLUDE" url="file:/home/elayn/.eclipse/org.eclipse.platform_4.4.1_1543616141_linux_gtk_x86_64/">
+		<feature id="org.eclipse.cdt.platform" url="features/org.eclipse.cdt.platform_8.5.0.201409172108/" version="8.5.0.201409172108">
+		</feature>
+		<feature id="org.eclipse.cdt.gnu.build" url="features/org.eclipse.cdt.gnu.build_8.5.0.201409172108/" version="8.5.0.201409172108">
+		</feature>
+		<feature id="org.eclipse.cdt" url="features/org.eclipse.cdt_8.4.0.201406111759/" version="8.4.0.201406111759">
+		</feature>
+		<feature id="org.eclipse.cdt.build.crossgcc" url="features/org.eclipse.cdt.build.crossgcc_8.4.0.201406111759/" version="8.4.0.201406111759">
+		</feature>
+		<feature id="org.eclipse.tcf.cdt.feature" url="features/org.eclipse.tcf.cdt.feature_1.2.0.201405271222/" version="1.2.0.201405271222">
+		</feature>
+		<feature id="org.eclipse.cdt.gdb" url="features/org.eclipse.cdt.gdb_8.5.0.201409172108/" version="8.5.0.201409172108">
+		</feature>
+		<feature id="org.eclipse.cdt.qt" url="features/org.eclipse.cdt.qt_8.5.0.201409172108/" version="8.5.0.201409172108">
+		</feature>
+		<feature id="org.eclipse.tm.terminal.ssh" url="features/org.eclipse.tm.terminal.ssh_2.1.300.201406020016/" version="2.1.300.201406020016">
+		</feature>
+		<feature id="org.eclipse.cdt.msw" url="features/org.eclipse.cdt.msw_8.5.0.201409172108/" version="8.5.0.201409172108">
+		</feature>
+		<feature id="org.eclipse.cdt.qt" url="features/org.eclipse.cdt.qt_1.1.0.201406111759/" version="1.1.0.201406111759">
+		</feature>
+		<feature id="org.eclipse.cdt.platform" url="features/org.eclipse.cdt.platform_8.4.0.201406111759/" version="8.4.0.201406111759">
+		</feature>
+		<feature id="org.eclipse.cdt.gdb" url="features/org.eclipse.cdt.gdb_8.4.0.201406111759/" version="8.4.0.201406111759">
+		</feature>
+		<feature id="org.eclipse.ptp.rdt.xlc" url="features/org.eclipse.ptp.rdt.xlc_8.0.0.201406102209/" version="8.0.0.201406102209">
+		</feature>
+		<feature id="org.eclipse.tcf.te.tcf.core.feature" plugin-identifier="org.eclipse.tcf.te" url="features/org.eclipse.tcf.te.tcf.core.feature_1.2.0.201406031211/" version="1.2.0.201406031211">
+		</feature>
+		<feature id="org.eclipse.cdt.gnu.dsf" url="features/org.eclipse.cdt.gnu.dsf_8.5.0.201409172108/" version="8.5.0.201409172108">
+		</feature>
+		<feature id="org.eclipse.cdt.autotools" url="features/org.eclipse.cdt.autotools_8.4.0.201406111759/" version="8.4.0.201406111759">
+		</feature>
+		<feature id="org.eclipse.tm.terminal" url="features/org.eclipse.tm.terminal_3.2.300.201406060905/" version="3.2.300.201406060905">
+		</feature>
+		<feature id="org.eclipse.cdt.native" url="features/org.eclipse.cdt.native_8.4.0.201406111759/" version="8.4.0.201406111759">
+		</feature>
+		<feature id="org.eclipse.cdt.native" url="features/org.eclipse.cdt.native_8.5.0.201409172108/" version="8.5.0.201409172108">
+		</feature>
+		<feature id="org.eclipse.cdt.debug.gdbjtag" url="features/org.eclipse.cdt.debug.gdbjtag_8.5.0.201409172108/" version="8.5.0.201409172108">
+		</feature>
+		<feature id="org.eclipse.tcf.feature" url="features/org.eclipse.tcf.feature_1.2.0.201405271224/" version="1.2.0.201405271224">
+		</feature>
+		<feature id="org.eclipse.tm.terminal.telnet" url="features/org.eclipse.tm.terminal.telnet_2.1.300.201406020016/" version="2.1.300.201406020016">
+		</feature>
+		<feature id="org.eclipse.cdt.gnu.dsf" url="features/org.eclipse.cdt.gnu.dsf_8.4.0.201406111759/" version="8.4.0.201406111759">
+		</feature>
+		<feature id="org.eclipse.cdt.gnu.debug" url="features/org.eclipse.cdt.gnu.debug_8.4.0.201406111759/" version="8.4.0.201406111759">
+		</feature>
+		<feature id="org.eclipse.cdt.build.crossgcc" url="features/org.eclipse.cdt.build.crossgcc_8.5.0.201409172108/" version="8.5.0.201409172108">
+		</feature>
+		<feature id="org.eclipse.tcf.core.feature" url="features/org.eclipse.tcf.core.feature_1.2.0.201405271222/" version="1.2.0.201405271222">
+		</feature>
+		<feature id="org.eclipse.tcf.te.tcf.launch.cdt.feature" plugin-identifier="org.eclipse.tcf.te.tcf.launch.cdt" url="features/org.eclipse.tcf.te.tcf.launch.cdt.feature_1.2.0.201405271222/" version="1.2.0.201405271222">
+		</feature>
+		<feature id="org.eclipse.linuxtools.cdt.libhover.feature" url="features/org.eclipse.linuxtools.cdt.libhover.feature_1.0.0.201406100404/" version="1.0.0.201406100404">
+		</feature>
+		<feature id="org.eclipse.cdt.gnu.build" url="features/org.eclipse.cdt.gnu.build_8.4.0.201406111759/" version="8.4.0.201406111759">
+		</feature>
+		<feature id="org.eclipse.cdt" url="features/org.eclipse.cdt_8.5.0.201409172108/" version="8.5.0.201409172108">
+		</feature>
+		<feature id="org.eclipse.tm.terminal.serial" url="features/org.eclipse.tm.terminal.serial_2.1.300.201406020016/" version="2.1.300.201406020016">
+		</feature>
+		<feature id="org.eclipse.cdt.gnu.debug" url="features/org.eclipse.cdt.gnu.debug_8.5.0.201409172108/" version="8.5.0.201409172108">
+		</feature>
+		<feature id="org.eclipse.tcf.te.feature" plugin-identifier="org.eclipse.tcf.te" url="features/org.eclipse.tcf.te.feature_1.2.0.201406042322/" version="1.2.0.201406042322">
+		</feature>
+	</site>
+</config>
