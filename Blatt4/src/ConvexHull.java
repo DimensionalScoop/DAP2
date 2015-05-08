@@ -22,7 +22,7 @@ public class ConvexHull
 	private static Point[] GenerateTestPoints()
 	{
 		Point[] points = new Point[1003];
-			points[0] = new Point(10, 10);
+			points[0] = new Point(10, 10);//three points for the bounding triangle
 			points[1] = new Point(10, 100);
 			points[2] = new Point(100, 10);
 
@@ -32,7 +32,7 @@ public class ConvexHull
 			for (int i = 3; i < points.length; i++)
 			{
 				double xPos = random.nextDouble() * 90 + 10;
-				double yPos = 10 + (100 - xPos) * random.nextDouble();
+				double yPos = 10 + (100 - xPos) * random.nextDouble();//clamp y to the bounds of the triangle
 
 				Point nextPoint = new Point(xPos, yPos);
 
@@ -51,7 +51,7 @@ public class ConvexHull
 			Random random = new Random();
 			for (int i = 0; i < points.length; i++)
 			{
-				double xPos = random.nextDouble() * 100-50;
+				double xPos = random.nextDouble() * 100-50;//generate points only between -50 and 50 to increase readability
 				double yPos = random.nextDouble() * 100-50;
 				
 				Point nextPoint = new Point(xPos, yPos);
