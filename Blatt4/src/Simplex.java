@@ -2,16 +2,19 @@
 public abstract class Simplex
 {
 	Point[] corners;
-	int dim;
+	int dim;//corner count of the simplex +1
 	
 	public Simplex(Point...points){
 		if (points.length == 0)
 			throw new IllegalArgumentException();
 		
-		this.corners=points;
+		corners=points;
 		dim=points.length-1;
 	}
 	
+	/*
+	 * returns the i-th point of the simplex
+	 */
 	public Point get(int i)
 	{
 		if (i < 0 || i > dim)

@@ -1,6 +1,6 @@
 public class Point
 {
-	int dim;
+	int dim;//dimension of the point
 	double[] components;
 
 	public Point(double... values)
@@ -12,6 +12,9 @@ public class Point
 		dim = values.length;
 	}
 
+	/*
+	 * returns the i-th component of the point
+	 */
 	public double get(int i)
 	{
 		if (i < 0 || i >= dim)
@@ -19,6 +22,9 @@ public class Point
 		return components[i];
 	}
 
+	/*
+	 * returns the dimension the point is defined in
+	 */
 	public int dim()
 	{
 		return dim;
