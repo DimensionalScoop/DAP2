@@ -19,14 +19,15 @@ public class Anwendung
 	private static ArrayList<Interval> parseFile(String[] args)
 	{
 		ArrayList<Interval> returnValue = new ArrayList<>();
-
+		RandomAccessFile file =null;
+		
 		try
 		{
 			if (args.length != 1)
 				throw new IllegalArgumentException();
 
 			String line;
-			RandomAccessFile file = new RandomAccessFile(args[0], "r");
+			file = new RandomAccessFile(args[0], "r");
 			System.out.println("Bearbeite Datei \"" + args[0] + "\".\n");
 
 			while ((line = file.readLine()) != null)// read all lines from the file as intervals separated by ','
@@ -36,8 +37,6 @@ public class Anwendung
 			}
 
 			printList("Es wurden " + returnValue.size() + " Zeilen mit folgendem Inhalt gelesen:", returnValue);
-
-			file.close();
 		} catch (NumberFormatException n)
 		{
 			System.err.println("Badly formated file.");
@@ -51,6 +50,18 @@ public class Anwendung
 			System.err.println("File not found.");
 			System.exit(1);
 		}
+		finally{
+			if(file!=null)
+				try
+				{
+					file.close();
+				} catch (IOException e)
+				{
+					System.err.println("Runtime Error");
+					System.exit(1);
+					e.printStackTrace();
+				}
+		}
 
 		return returnValue;
 	}
@@ -58,14 +69,14 @@ public class Anwendung
 	/*
 	 * Prints the message and all elements of the given list
 	 */
-	private static void printList(String message, ArrayList<Interval> returnValue)
+	private static void printList(String message, ArrayList<Interval> list)
 	{
 		System.out.print(message + "\n[");
-		for (int i = 0; i < returnValue.size(); i++)
+		for (int i = 0; i < list.size(); i++)
 		{
 			if (i > 0)
 				System.out.print(", ");
-			System.out.print(returnValue.get(i).toString());
+			System.out.print(list.get(i).toString());
 		}
 		System.out.println("]\n");
 	}

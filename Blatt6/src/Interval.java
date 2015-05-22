@@ -1,5 +1,5 @@
 
-public class Interval implements Comparable<Interval>
+public class Interval implements Comparable<Interval>, TimeTuple
 {
 	int start;
 	int end;
@@ -16,5 +16,15 @@ public class Interval implements Comparable<Interval>
 		if(other.end==this.end)return 0;
 		if(other.end>this.end)return -1;
 		return 1;
+	}
+	@Override
+	public int getFirstTime()
+	{
+		return getStart();
+	}
+	@Override
+	public int getSecondTime()
+	{
+		return getEnd();
 	}
 }
