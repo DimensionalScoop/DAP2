@@ -13,31 +13,40 @@ public class Anwendung2
 		Interval, Lateness
 	};
 
-	static OptType Algorithm;
+	static OptType Algorithm;//describes how int-tuples are interpreted
 
 	public static void main(String[] args)
 	{
 		parseParams(args);
 
+		doScheduling();
+	}
+
+	private static void doScheduling()
+	{
 		if (Algorithm == OptType.Interval)
 		{
+			//convert TimeTuple list to a interval list
 			ArrayList<Interval> intervals = new ArrayList<>();
 			for (int i = 0; i < schedule.size(); i++)
 			{
 				intervals.add((Interval) schedule.get(i));
 			}
+			
 			intervalScheduling(intervals);
 		} else if (Algorithm == OptType.Lateness)
 		{
+			//convert TimeTuple list to a job list
 			ArrayList<Job> jobs = new ArrayList<>();
 			for (int i = 0; i < schedule.size(); i++)
 			{
 				jobs.add((Job) schedule.get(i));
 			}
+			
 			latenessScheduling(jobs);
 		} else
 		{
-			throw new RuntimeException();
+			throw new RuntimeException("Not implemented.");
 		}
 	}
 
@@ -72,7 +81,7 @@ public class Anwendung2
 				else if (Algorithm == OptType.Lateness)
 					schedule.add(new Job(Integer.parseInt(tokenizer.nextToken()), Integer.parseInt(tokenizer.nextToken())));
 				else
-					throw new RuntimeException();
+					throw new RuntimeException("Not implemented.");
 			}
 
 			printList("Es wurden " + schedule.size() + " Zeilen mit folgendem Inhalt gelesen:", schedule);
@@ -91,6 +100,7 @@ public class Anwendung2
 			System.exit(1);
 		} finally
 		{
+			//close file if necessary
 			if (file != null)
 				try
 				{
@@ -119,23 +129,33 @@ public class Anwendung2
 		System.out.println("]\n");
 	}
 
+	/*
+	 * Prints the message and all elements of the given list
+	 */
 	private static void printIntervalList(String message, ArrayList<Interval> list)
 	{
+		//convert list
 		ArrayList<TimeTuple> tupel = new ArrayList<>();
 		for (int i = 0; i < list.size(); i++)
 		{
 			tupel.add(list.get(i));
 		}
+		
 		printList(message, tupel);
 	}
 
+	/*
+	 * Prints the message and all elements of the given list
+	 */
 	private static void printJobList(String message, ArrayList<Job> list)
 	{
+		//convert list
 		ArrayList<TimeTuple> tupel = new ArrayList<>();
 		for (int i = 0; i < list.size(); i++)
 		{
 			tupel.add(list.get(i));
 		}
+		
 		printList(message, tupel);
 	}
 
@@ -188,7 +208,7 @@ public class Anwendung2
 			maxLateness = Math.max(maxLateness, time - jobs.get(i).deadline);
 		}
 
-		System.out.print("Berechnetes Intervallscheduling:\n[");
+		System.out.print("Berechnetes Latenssscheduling:\n[");
 		for (int i = 0; i < returnValue.length; i++)//print times
 		{
 			if (i > 0)

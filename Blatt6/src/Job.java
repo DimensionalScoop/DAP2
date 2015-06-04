@@ -10,6 +10,8 @@ public class Job implements Comparable<Job>, TimeTuple
 	public Job(int duration, int deadline){
 		this.duration=duration;
 		this.deadline=deadline;
+		if(duration<0 || deadline<0)
+			throw new NumberFormatException();
 	}
 	
 	public int compareTo(Job other){

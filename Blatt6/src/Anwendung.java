@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 public class Anwendung
@@ -37,7 +38,7 @@ public class Anwendung
 			}
 
 			printList("Es wurden " + returnValue.size() + " Zeilen mit folgendem Inhalt gelesen:", returnValue);
-		} catch (NumberFormatException n)
+		} catch (NumberFormatException | NoSuchElementException n)
 		{
 			System.err.println("Badly formated file.");
 			System.exit(1);
